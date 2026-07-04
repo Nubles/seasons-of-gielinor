@@ -25,39 +25,6 @@
 
 ---
 
-## Gallery
+## Contributing
 
-| Temperate Rain | Fremennik Blizzard |
-| :---: | :---: |
-| ![Rain Preview](assets/rain_weather_mockup_1783127511731.png) | ![Snow Preview](assets/snow_weather_mockup_1783127526742.png) |
-
-| Kharidian Sandstorm | Prifddinas Crystal Dust |
-| :---: | :---: |
-| ![Sandstorm Preview](assets/sandstorm_weather_mockup_1783127537330.png) | ![Magical Preview](assets/magical_weather_mockup_1783127642547.png) |
-
-| Fossil Island Underwater | Hosidius Autumn Leaves |
-| :---: | :---: |
-| ![Underwater Preview](assets/underwater_weather_mockup_1783127698629.png) | ![Autumn Preview](assets/autumn_weather_mockup_1783127751440.png) |
-
-| Arceuus Soul Dust | Cosmic Abyss Stardust |
-| :---: | :---: |
-| ![Arceuus Preview](assets/arceuus_weather_mockup_1783127799022.png) | ![Cosmic Preview](assets/cosmic_weather_mockup_1783127886696.png) |
-
----
-
-## Developer Setup
-
-### Prerequisites
-* Java 11 JDK
-* An IDE (IntelliJ IDEA is highly recommended)
-
-### Running in Development Mode
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/Nubles/seasons-of-gielinor.git
-   ```
-2. Open the project in IntelliJ IDEA.
-3. Gradle will automatically sync and fetch the RuneLite client dependencies.
-4. Locate the bootstrap file `src/test/java/com/weather/WeatherPluginTest.java`.
-5. Right-click the file and select **Run 'WeatherPluginTest.main()'**.
-6. The RuneLite client will launch in developer mode with the **Dynamic Weather** plugin enabled.
+Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for developer setup instructions, guideline information, and details on how to build or run the plugin in development mode.
