@@ -1,4 +1,4 @@
-package com.weather;
+package com.nubles.seasonsofgielinor;
 
 import net.runelite.api.coords.WorldPoint;
 

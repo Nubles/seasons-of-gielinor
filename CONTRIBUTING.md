@@ -15,7 +15,7 @@ Thank you for your interest in contributing to **Seasons of Gielinor**! Here are
    ```
 2. Open the project in IntelliJ IDEA.
 3. Gradle will automatically sync and fetch the RuneLite client dependencies.
-4. Locate the bootstrap file `src/test/java/com/weather/WeatherPluginTest.java`.
+4. Locate the bootstrap file `src/test/java/com/nubles/seasonsofgielinor/WeatherPluginTest.java`.
 5. Right-click the file and select **Run 'WeatherPluginTest.main()'**.
 6. The RuneLite client will launch in developer mode with the **Dynamic Weather** plugin enabled.
 

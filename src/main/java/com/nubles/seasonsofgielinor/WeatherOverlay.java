@@ -1,4 +1,4 @@
-package com.weather;
+package com.nubles.seasonsofgielinor;
 
 import java.awt.Color;
 import java.awt.Dimension;

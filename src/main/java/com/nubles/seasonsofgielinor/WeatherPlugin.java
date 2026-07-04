@@ -1,4 +1,4 @@
-package com.weather;
+package com.nubles.seasonsofgielinor;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;

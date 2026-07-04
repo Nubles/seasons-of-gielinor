@@ -1,4 +1,4 @@
-package com.weather;
+package com.nubles.seasonsofgielinor;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;

@@ -1,4 +1,4 @@
-package com.weather;
+package com.nubles.seasonsofgielinor;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
