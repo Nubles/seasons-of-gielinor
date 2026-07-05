@@ -13,9 +13,13 @@ import net.runelite.api.Client;
 import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayLayer;
 import net.runelite.client.ui.overlay.OverlayPosition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class WeatherOverlay extends Overlay
 {
+	private static final Logger log = LoggerFactory.getLogger(WeatherOverlay.class);
+
 	private final Client client;
 	private final WeatherPlugin plugin;
 	private final WeatherConfig config;
@@ -34,6 +38,8 @@ public class WeatherOverlay extends Overlay
 	private float lightningIntensity = 0.0f;
 	private float nextLightningTime = 5.0f; // Seconds until next lightning strike
 	private int lightningFlickerStage = 0; // 0 = idle, 1 = first peak decay, 2 = second peak decay
+
+	private int frameCount = 0;
 
 	private static class Particle
 	{
@@ -56,7 +62,7 @@ public class WeatherOverlay extends Overlay
 		this.config = config;
 
 		setPosition(OverlayPosition.DYNAMIC);
-		setLayer(OverlayLayer.ABOVE_SCENE);
+		setLayer(OverlayLayer.ALWAYS_ON_TOP); // Keep ALWAYS_ON_TOP for login screen preview
 	}
 
 	@Override
@@ -81,6 +87,13 @@ public class WeatherOverlay extends Overlay
 		}
 
 		WeatherType newWeather = plugin.getCurrentWeather();
+
+		// Debug print (once every 5 seconds to avoid log spam)
+		frameCount++;
+		if (frameCount % 300 == 0)
+		{
+			log.info("WeatherOverlay render executing. Weather: {}, Canvas size: {}x{}", newWeather, width, height);
+		}
 
 		// Handle transition triggering
 		if (newWeather != targetWeather)

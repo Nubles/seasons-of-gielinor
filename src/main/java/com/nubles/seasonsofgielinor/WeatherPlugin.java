@@ -9,6 +9,8 @@ import net.runelite.client.config.ConfigManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.OverlayManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @PluginDescriptor(
 	name = "Dynamic Weather",
@@ -18,6 +20,8 @@ import net.runelite.client.ui.overlay.OverlayManager;
 )
 public class WeatherPlugin extends Plugin
 {
+	private static final Logger log = LoggerFactory.getLogger(WeatherPlugin.class);
+
 	@Inject
 	private Client client;
 
@@ -33,12 +37,14 @@ public class WeatherPlugin extends Plugin
 	@Override
 	protected void startUp() throws Exception
 	{
+		log.info("Dynamic Weather plugin starting up...");
 		overlayManager.add(overlay);
 	}
 
 	@Override
 	protected void shutDown() throws Exception
 	{
+		log.info("Dynamic Weather plugin shutting down...");
 		overlayManager.remove(overlay);
 	}
 
