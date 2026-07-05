@@ -88,11 +88,11 @@ public class WeatherOverlay extends Overlay
 
 		WeatherType newWeather = plugin.getCurrentWeather();
 
-		// Debug print (once every 5 seconds to avoid log spam)
+		// Debug print: print the first 10 frames immediately, then once every 300 frames
 		frameCount++;
-		if (frameCount % 300 == 0)
+		if (frameCount <= 10 || frameCount % 300 == 0)
 		{
-			log.info("WeatherOverlay render executing. Weather: {}, Canvas size: {}x{}", newWeather, width, height);
+			log.info("WeatherOverlay render executing (frame {}). Weather: {}, Canvas size: {}x{}", frameCount, newWeather, width, height);
 		}
 
 		// Handle transition triggering
